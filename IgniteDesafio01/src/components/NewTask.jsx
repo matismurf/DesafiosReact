@@ -35,10 +35,17 @@ export function NewTask({taskText}){
 
     return(
         <div className={styles.newTaskContent}>
-            <form>
-                <input className={styles.txtTarefa} type="text" placeholder="Adicione uma nova tarefa"></input>
-                <button className={styles.btnCriar}>Criar <PlusCircle size={20}/></button>
-            </form>
+            <input 
+                className={styles.txtTarefa} 
+                type="text" 
+                placeholder="Adicione uma nova tarefa"
+                value={newTaskText}
+                onChange={handleNewTaskChange}
+                onInvalid={handleNewTaskInvalid}
+                required
+            ></input>
+            <button className={styles.btnCriar} onClick={handleCreateNewTask}>Criar <PlusCircle size={20}/></button>
+            
             </div>
     )
 }

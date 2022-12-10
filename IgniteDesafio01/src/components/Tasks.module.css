@@ -112,9 +112,9 @@
 }
 
 .taskListEmpty{
-    visibility: visible;
+    visibility: hidden;
 }
 
 .taskList{
-    visibility: hidden;
+    visibility: visible;
 }
